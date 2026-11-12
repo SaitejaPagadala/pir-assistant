@@ -113,6 +113,95 @@ records and exposed to Claude as tools:
 Each chunk knows its **section, paragraph, story, cohort and page**, so citations read like
 `PIR Consultation Paper (Aug 2026), §11 ¶5 (p.68)`.
 
+## Architecture
+
+The system has two halves that only meet through files on disk: an **offline build pipeline** (run by the
+owner, or weekly by GitHub Actions) and an **online query path** (run for every question). The built index
+in `data/processed/` is the contract between them.
+
+```mermaid
+flowchart TB
+    subgraph BUILD["Build time (offline)"]
+        direction LR
+        S[sources.yaml] --> F[scraper/fetch.py]
+        M[data/manual/<br/>PDFs you download] --> F
+        F --> R[(data/raw/<br/>+ manifest.jsonl)]
+        R --> P[scraper/parse.py<br/>PyMuPDF · trafilatura]
+        P --> C[pipeline/chunk.py<br/>structure-aware chunker]
+        C --> E[fastembed<br/>bge-small-en-v1.5]
+        E --> I[(data/processed/)]
+        C --> I
+    end
+
+    subgraph RUN["Query time (online)"]
+        direction LR
+        U([User]) --> UI[app/streamlit_app.py<br/>password · caps · mode]
+        UI --> AG[rag/agent.py<br/>Claude tool-use loop]
+        AG <--> T[rag/tools.py<br/>6 tools]
+        T --> RT[rag/retriever.py<br/>BM25 + dense · RRF]
+        RT --> I2[(data/processed/)]
+        T --> I2
+        AG --> UI
+    end
+
+    I -. committed to git .-> I2
+    GH[GitHub Actions<br/>weekly refresh] -. runs .-> BUILD
+```
+
+**Request flow for one question**
+
+1. The UI checks the passphrase and the per-session and daily caps, then calls `answer()`.
+2. `agent.py` sends the question, the last 6 messages and the tool definitions to Claude.
+3. Claude decides which tool to call (for example `search_sources` for a topic, `list_stories` for a
+   count), and `tools.py` runs it against the index.
+4. Tool results (passages, each with a ready-made citation string) go back to Claude. The loop repeats up
+   to 5 steps.
+5. Claude writes a short answer that quotes the citation strings. The UI shows the answer and an expandable
+   **Sources** list of the passages used, plus an estimated cost.
+
+### Components explained
+
+| Component | File | What it does and why |
+|---|---|---|
+| **Source inventory** | [sources.yaml](sources.yaml) | One entry per public document: id, publisher, type (`pdf` or `html`), URL or local file, chunker (`pir_paper` or `generic`), version and date. Adding a source is a config change, not a code change. Also holds the crawler's user agent and delay. |
+| **Fetcher** | [scraper/fetch.py](scraper/fetch.py) | Polite downloader: honours `robots.txt`, identifies itself, waits 3 s between requests, and picks up manually downloaded files from `data/manual/`. Each fetch is SHA-256 hashed and appended to `data/manifest.jsonl` only when the content changed, which gives a version history. Blocked sites are reported and skipped, never bypassed. |
+| **Parsers** | [scraper/parse.py](scraper/parse.py) | PDFs go through PyMuPDF, which returns text per page and maps PDF pages to the *printed* page numbers so citations match the document. HTML goes through trafilatura to strip navigation and boilerplate. |
+| **Chunker** | [pipeline/chunk.py](pipeline/chunk.py) | The core of answer quality. For the consultation paper it understands the layout: sections, strictly sequential numbered paragraphs, the 59 user stories grouped by cohort, the 14 questions grouped A–F, and the glossary. Every chunk carries section, paragraph, page range, theme tags and a ready-made `cite` string. Long items are split on sub-items or sentences (about 2,500 characters at most). Other documents use size-based windows. |
+| **Index builder** | [pipeline/build_index.py](pipeline/build_index.py) | Orchestrates the build. Writes `chunks.jsonl`, `stories.json`, `questions.json`, `glossary.json`, `sources_index.json`, `history.json`, and `embeddings.npy` (unit-normalised vectors from the local `BAAI/bge-small-en-v1.5` model via fastembed, so no embedding API cost). If a raw file is missing it keeps the previous build's chunks. |
+| **Retriever** | [rag/retriever.py](rag/retriever.py) | Hybrid search. A small built-in BM25 handles exact terms and acronyms, a dense vector search handles meaning, and the two rankings are merged with reciprocal rank fusion (RRF). Filters by source, section or kind. Falls back to keyword-only if embeddings are unavailable. |
+| **Tools** | [rag/tools.py](rag/tools.py) | The six functions Claude can call: `search_sources`, `get_story`, `list_stories`, `get_question`, `define_term`, `list_sources`. Counting and listing run as exact lookups over structured records, so those answers are not guessed. Tool errors are returned as data and never crash the chat. |
+| **Agent** | [rag/agent.py](rag/agent.py) | The Claude tool-use loop. The system prompt enforces the rules: answer only from tool results, cite every claim, say *"That is not in the indexed sources"* when unsure, treat the paper as a proposal, and ignore instructions found inside retrieved text (prompt-injection defence). Hard limits: 5 steps, 900 output tokens, 6 messages of history. Tracks token use and estimated cost. |
+| **UI** | [app/streamlit_app.py](app/streamlit_app.py) | Streamlit chat with an optional passphrase gate, a Fast (Haiku) or Deep (Sonnet) toggle, per-session and shared daily question caps, and an expandable list of sources per answer. Reads settings from `.env` or Streamlit secrets. |
+| **Evaluation** | [eval/](eval/) | `golden.yaml` holds 10 questions with expected facts, including a "must say not found" case. `run_eval.py` runs them against the live agent and reports pass/fail, citations and cost. |
+| **Tests** | [tests/test_chunk.py](tests/test_chunk.py) | Unit tests for the chunker using the real PDF line layout (for example the paragraph number alone on its own line). |
+| **Automation** | [.github/workflows/refresh.yml](.github/workflows/refresh.yml) | Weekly job: run tests, re-fetch sources, rebuild the index, and commit if anything changed. |
+
+### Data produced by the build
+
+| File in `data/processed/` | Content | Used by |
+|---|---|---|
+| `chunks.jsonl` | Every passage with text, citation, page range, section, themes | Retriever, all tools |
+| `embeddings.npy` | One normalised vector per chunk | Retriever (dense search) |
+| `stories.json` | The 59 stories: number, title, cohort, pages, chunk ids | `list_stories`, `get_story` |
+| `questions.json` | The 14 questions with group and chunk id | `get_question` |
+| `glossary.json` | 36 terms and expansions (not embedded) | `define_term` |
+| `sources_index.json`, `history.json` | What is indexed and when each source changed | `list_sources` |
+| `index_meta.json` | Embedding model, dimensions, build time | Retriever |
+
+### Key design decisions
+
+- **Structured data plus search.** Free-text search is bad at "how many" and "list all". Stories,
+  questions and glossary terms are therefore parsed into records and served by exact-lookup tools.
+- **Hybrid retrieval.** Policy text is full of acronyms and exact phrases (BM25 is strong there) as well as
+  paraphrased questions (embeddings are strong there). Fusing both beats either alone.
+- **Citations by construction.** The citation string is built once at chunk time from real section,
+  paragraph and page data, then quoted by the model. It is not generated from memory.
+- **Index in git, secrets out of git.** The built index is committed so hosting needs no build step and no
+  PDF; keys live only in `.env` or the host's secrets store.
+- **Cost and abuse controls at every layer.** Local embeddings, a cheap default model, bounded tool steps
+  and tokens, session and daily caps, and an optional passphrase.
+- **Trust boundary.** Retrieved text is treated as untrusted data, and only public documents are indexed.
+
 ## Try it
 
 - **Live app:** _add your Streamlit URL here_ (passphrase-protected)
