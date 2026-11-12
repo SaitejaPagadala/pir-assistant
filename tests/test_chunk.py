@@ -108,3 +108,30 @@ def test_glossary():
     *_, glossary = run()
     assert glossary["API"] == "Application Programming Interface"
     assert glossary["BQP / BQPs"] == "Broker Qualified Person / Broker Qualified Persons"
+
+
+# --- real PyMuPDF layout: the paragraph number sits alone on its own line ("1. "), text follows
+REAL_PAGES = [
+    page(1, "COVER\n"),
+    page(2, "Section 1 - Overview\n"
+            "1. \nOverview: first paragraph text that continues\non a second line. \n"
+            "2. \nKey terms: second paragraph. \na) Registry: the whole thing. \n"
+            "3. \nThird paragraph. \n"),
+]
+
+
+def test_number_alone_on_its_own_line():
+    from pipeline.chunk import walk_numbered, flatten
+    chunks, *_ = chunk_pir_paper(REAL_PAGES + [page(3, "Section 2 - Next\n1. \nOnly para. \n")], META)
+    s1 = [c for c in chunks if c["section"] == 1]
+    assert [c["para"] for c in s1] == [1, 2, 3]
+    assert s1[0]["text"].startswith("Overview: first paragraph text that continues on a second line.")
+    assert "Key terms" in s1[1]["text"] and "\na) Registry" in s1[1]["text"]
+
+
+def test_preamble_is_size_split():
+    big = "Sentence number one is here. " * 200
+    pages = [page(1, "Section 1 - Overview\n" + big + "\n1. \nFirst para.\n")]
+    chunks, *_ = chunk_pir_paper(pages, META)
+    pre = [c for c in chunks if c["id"].split(":")[1] == "s1" and ":pre" in c["id"]]
+    assert len(pre) >= 2 and all(len(c["text"]) <= 2500 for c in pre)

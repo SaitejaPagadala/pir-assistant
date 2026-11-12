@@ -392,7 +392,8 @@
   "page_start": 42,
   "page_end": 43,
   "chunk_ids": [
-   "pir-consultation-paper:story36"
+   "pir-consultation-paper:story36:1",
+   "pir-consultation-paper:story36:2"
   ]
  },
  {
@@ -403,7 +404,8 @@
   "page_start": 43,
   "page_end": 44,
   "chunk_ids": [
-   "pir-consultation-paper:story37"
+   "pir-consultation-paper:story37:1",
+   "pir-consultation-paper:story37:2"
   ]
  },
  {
@@ -425,7 +427,8 @@
   "page_start": 45,
   "page_end": 46,
   "chunk_ids": [
-   "pir-consultation-paper:story39"
+   "pir-consultation-paper:story39:1",
+   "pir-consultation-paper:story39:2"
   ]
  },
  {

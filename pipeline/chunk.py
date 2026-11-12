@@ -15,7 +15,7 @@ import re
 from collections import Counter
 
 MAX_CHARS = 2200        # paragraphs longer than this are split
-STORY_MAX = 3800
+STORY_MAX = 2300
 WINDOW = 1100           # generic window size
 OVERLAP = 150
 
@@ -23,7 +23,8 @@ DASH = "[\u2013\u2014-]"
 HEAD_RE = re.compile(rf"^Section\s+(\d{{1,2}})\s*{DASH}\s*(\S.*)$")
 COHORT_RE = re.compile(r"^8\.(\d)\s+User Cohort\s+(\d)\s*:\s*(.*)$")
 STORY_RE = re.compile(r"^(\d{1,2})\s*:\s+(\S.*)$")
-NUMPARA_RE = re.compile(r"^(\d{1,2})\.\s+(\S.*)$")
+# Paragraph starts come either inline ("1. Text") or with the number alone on its line ("1." / "1. ")
+NUMPARA_RE = re.compile(r"^(\d{1,2})\s*[.．]\s*(\S.*)?$")
 SUBITEM_RE = re.compile(r"^\(?([a-i])\)\s+")
 GROUP_RE = re.compile(r"^([A-F])\.\s+(\S.*)$")
 SUBSEC_RE = re.compile(r"^7\.(\d)\.?\s+(\S.*)$")
@@ -133,7 +134,8 @@ def walk_numbered(lines, heading_res=()):
             continue
         m = NUMPARA_RE.match(s)
         if m and int(m.group(1)) == expected:
-            cur = {"n": expected, "lines": [(page, m.group(2))], "tag": tag}
+            first = (m.group(2) or "").strip()
+            cur = {"n": expected, "lines": [(page, first)] if first else [], "tag": tag, "page": page}
             paras.append(cur)
             expected += 1
             continue
@@ -308,9 +310,15 @@ def chunk_pir_paper(pages: list[dict], meta: dict):
         heading_res = [(SUBSEC_RE, "sub")] if n == 7 else []
         pre, paras = walk_numbered(lines, heading_res)
         if pre:
-            add(f"s{n}:pre", "paragraph", join_lines(pre), pre, f"\u00a7{n} {title}", **common, label="intro")
+            ptext = join_lines(pre)
+            pparts = split_long(ptext, MAX_CHARS, OVERLAP) if len(ptext) > MAX_CHARS else [ptext]
+            for k, part in enumerate(pparts, 1):
+                add(f"s{n}:pre" + (f":{k}" if len(pparts) > 1 else ""), "paragraph", part, pre,
+                    f"\u00a7{n} {title}" + (f" part {k}" if len(pparts) > 1 else ""), **common, label="intro")
         for p in paras:
             sub = p["tag"][1][1] if p["tag"] else None
+            if not p["lines"]:
+                continue
             text = join_lines(p["lines"])
             if len(text) <= MAX_CHARS:
                 groups = [p["lines"]]
