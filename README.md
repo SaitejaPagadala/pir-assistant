@@ -204,8 +204,7 @@ flowchart TB
 
 ## Try it
 
-- **Live app:** _add your Streamlit URL here_ (passphrase-protected)
-- **Locally:** see [Quick start](#quick-start)
+- **Live app:** https://pir-assistant-47pqtsbrwk2taappjnedkhi.streamlit.app/ (passphrase-aberto)
 
 ## Quick start
 
