@@ -1,0 +1,24 @@
+[
+ {
+  "source_id": "pir-consultation-paper",
+  "title": "Public Insurance Registry - Digital Public Infrastructure for Insurance: Public Consultation Paper (Aug 2026)",
+  "publisher": "IRDAI",
+  "url": null,
+  "file": "data/raw/pir-consultation-paper/20261112T162824Z.pdf",
+  "sha256": "083fe10cd858ee153c4546395289a4ceedb6fe8ef431eca5a6aeb46ccd0a2ec6",
+  "bytes": 2705381,
+  "fetched_at": "20261112T162824Z",
+  "status": "manual"
+ },
+ {
+  "source_id": "iib-pir-portal",
+  "title": "IIB - PIR consultation portal",
+  "publisher": "IIB",
+  "url": "https://iib.gov.in/pir",
+  "file": "data/raw/iib-pir-portal/20261112T162824Z.html",
+  "sha256": "7bf285d3f9b0f6f5ce63023d0e0a3718b18e65ad35c63767f49a7bd14633345e",
+  "bytes": 40920,
+  "fetched_at": "20261112T162824Z",
+  "status": "ok"
+ }
+]

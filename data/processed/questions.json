@@ -1,0 +1,100 @@
+[
+ {
+  "question_no": 1,
+  "group": "A. Strategic case and public value of PIR (Section 2 to 4)",
+  "chunk_id": "pir-consultation-paper:q1",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 2,
+  "group": "B. User stories, stakeholder needs and coverage gaps (Reference: Section 7, 8 and 9)",
+  "chunk_id": "pir-consultation-paper:q2",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 3,
+  "group": "B. User stories, stakeholder needs and coverage gaps (Reference: Section 7, 8 and 9)",
+  "chunk_id": "pir-consultation-paper:q3",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 4,
+  "group": "B. User stories, stakeholder needs and coverage gaps (Reference: Section 7, 8 and 9)",
+  "chunk_id": "pir-consultation-paper:q4",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 5,
+  "group": "C. Data architecture, repositories, identity and standards (Section 10 to 12)",
+  "chunk_id": "pir-consultation-paper:q5",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 6,
+  "group": "C. Data architecture, repositories, identity and standards (Section 10 to 12)",
+  "chunk_id": "pir-consultation-paper:q6",
+  "page_start": 77,
+  "page_end": 77
+ },
+ {
+  "question_no": 7,
+  "group": "C. Data architecture, repositories, identity and standards (Section 10 to 12)",
+  "chunk_id": "pir-consultation-paper:q7",
+  "page_start": 77,
+  "page_end": 78
+ },
+ {
+  "question_no": 8,
+  "group": "D. Privacy, consent, confidentiality and safeguards (Reference: Section 10)",
+  "chunk_id": "pir-consultation-paper:q8",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 9,
+  "group": "D. Privacy, consent, confidentiality and safeguards (Reference: Section 10)",
+  "chunk_id": "pir-consultation-paper:q9",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 10,
+  "group": "D. Privacy, consent, confidentiality and safeguards (Reference: Section 10)",
+  "chunk_id": "pir-consultation-paper:q10",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 11,
+  "group": "E. Regulation, governance and implementation readiness",
+  "chunk_id": "pir-consultation-paper:q11",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 12,
+  "group": "E. Regulation, governance and implementation readiness",
+  "chunk_id": "pir-consultation-paper:q12",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 13,
+  "group": "E. Regulation, governance and implementation readiness",
+  "chunk_id": "pir-consultation-paper:q13",
+  "page_start": 78,
+  "page_end": 78
+ },
+ {
+  "question_no": 14,
+  "group": "F. Any other suggestion you may have in this context",
+  "chunk_id": "pir-consultation-paper:q14",
+  "page_start": 78,
+  "page_end": 78
+ }
+]

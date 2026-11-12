@@ -1,0 +1,22 @@
+# Golden questions for regression checks. Fill/adjust expectations as you verify them against the paper.
+# any: at least one substring must appear (case-insensitive). all: every substring must appear.
+- q: "Which Act is PIR's legal anchor?"
+  any: ["Sabka Bima Sabki Raksha"]
+- q: "Which existing organisation is proposed to operate PIR?"
+  any: ["Insurance Information Bureau", "IIB"]
+- q: "What is the last date for submitting comments on the consultation paper?"
+  any: ["30th September", "30 September", "September 30"]
+- q: "What email address can comments be sent to?"
+  any: ["pirfeedback@iib.gov.in"]
+- q: "What four properties must consent have under the proposed mechanism?"
+  all: ["specific", "informed", "revocable", "auditable"]
+- q: "How many user stories does the paper contain?"
+  any: ["59"]
+- q: "How many consultation questions are there?"
+  any: ["14"]
+- q: "What does IRS stand for in the paper?"
+  any: ["Insurance Risk Score"]
+- q: "Will PIR store full KYC documents centrally?"
+  any: ["not", "no ", "remain with"]
+- q: "What is the official go-live date of PIR?"
+  any: ["not in the indexed sources", "not specified", "does not specify", "not stated", "no go-live"]

@@ -1,0 +1,32 @@
+name: Refresh sources and rebuild index
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"      # Mondays 03:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run unit tests
+        run: python -m pytest -q tests
+      - name: Fetch sources (polite, robots-aware)
+        run: python -m scraper.fetch
+      - name: Rebuild index
+        run: python -m pipeline.build_index
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "pir-assistant-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/manifest.jsonl data/processed
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "chore: refresh sources and index"; git push; fi

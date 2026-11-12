@@ -1,0 +1,651 @@
+[
+ {
+  "story_no": 1,
+  "title": "Public assesses suitability of class of products appropriate to their needs",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 18,
+  "page_end": 19,
+  "chunk_ids": [
+   "pir-consultation-paper:story1"
+  ]
+ },
+ {
+  "story_no": 2,
+  "title": "Public discover and compare insurance products easily",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 19,
+  "page_end": 19,
+  "chunk_ids": [
+   "pir-consultation-paper:story2"
+  ]
+ },
+ {
+  "story_no": 3,
+  "title": "Public ascertain trustworthiness of insurers before purchasing an insurance product",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 19,
+  "page_end": 20,
+  "chunk_ids": [
+   "pir-consultation-paper:story3"
+  ]
+ },
+ {
+  "story_no": 4,
+  "title": "Public perform ‘Know Your Insurance intermediary’ in assisted purchases",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 20,
+  "page_end": 20,
+  "chunk_ids": [
+   "pir-consultation-paper:story4"
+  ]
+ },
+ {
+  "story_no": 5,
+  "title": "Public perform ‘Know Your Agent’ in assisted purchases",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 20,
+  "page_end": 21,
+  "chunk_ids": [
+   "pir-consultation-paper:story5"
+  ]
+ },
+ {
+  "story_no": 6,
+  "title": "Public get efficient and cost-effective options for digital or direct purchase",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 21,
+  "page_end": 21,
+  "chunk_ids": [
+   "pir-consultation-paper:story6"
+  ]
+ },
+ {
+  "story_no": 7,
+  "title": "Policyholders convey their grievances in any language, using any method, through any channel, and at any time",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 21,
+  "page_end": 22,
+  "chunk_ids": [
+   "pir-consultation-paper:story7"
+  ]
+ },
+ {
+  "story_no": 8,
+  "title": "Policyholders can port policies across insurers seamlessly",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 22,
+  "page_end": 22,
+  "chunk_ids": [
+   "pir-consultation-paper:story8"
+  ]
+ },
+ {
+  "story_no": 9,
+  "title": "Policyholders get a consolidated view of their policies.",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 23,
+  "page_end": 23,
+  "chunk_ids": [
+   "pir-consultation-paper:story9"
+  ]
+ },
+ {
+  "story_no": 10,
+  "title": "Policyholders can file common service requests",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 23,
+  "page_end": 23,
+  "chunk_ids": [
+   "pir-consultation-paper:story10"
+  ]
+ },
+ {
+  "story_no": 11,
+  "title": "Nominee or family member of a deceased policyholder get a prompt about claims linked to other policies",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 24,
+  "page_end": 24,
+  "chunk_ids": [
+   "pir-consultation-paper:story11"
+  ]
+ },
+ {
+  "story_no": 12,
+  "title": "Purchase by a repeat customer is made easier",
+  "cohort_no": 1,
+  "cohort": "Public and policyholders Including Small and Medium",
+  "page_start": 24,
+  "page_end": 25,
+  "chunk_ids": [
+   "pir-consultation-paper:story12"
+  ]
+ },
+ {
+  "story_no": 13,
+  "title": "Insurers identify protection gaps and business growth opportunities",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 25,
+  "page_end": 26,
+  "chunk_ids": [
+   "pir-consultation-paper:story13"
+  ]
+ },
+ {
+  "story_no": 14,
+  "title": "Insurers identify product improvement opportunities",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 26,
+  "page_end": 26,
+  "chunk_ids": [
+   "pir-consultation-paper:story14"
+  ]
+ },
+ {
+  "story_no": 15,
+  "title": "Insurers adopt business strategy of higher direct sales and lower overall cost of doing business",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 26,
+  "page_end": 27,
+  "chunk_ids": [
+   "pir-consultation-paper:story15"
+  ]
+ },
+ {
+  "story_no": 16,
+  "title": "Insurers adopt efficient and easier ways of KYC",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 27,
+  "page_end": 27,
+  "chunk_ids": [
+   "pir-consultation-paper:story16"
+  ]
+ },
+ {
+  "story_no": 17,
+  "title": "Insurers assess performance of insurance intermediaries",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 28,
+  "page_end": 28,
+  "chunk_ids": [
+   "pir-consultation-paper:story17"
+  ]
+ },
+ {
+  "story_no": 18,
+  "title": "Insurers identify policyholders uniquely",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 28,
+  "page_end": 29,
+  "chunk_ids": [
+   "pir-consultation-paper:story18"
+  ]
+ },
+ {
+  "story_no": 19,
+  "title": "Insurers improve their underwriting, pricing, and portfolio risk management decisions",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 29,
+  "page_end": 29,
+  "chunk_ids": [
+   "pir-consultation-paper:story19"
+  ]
+ },
+ {
+  "story_no": 20,
+  "title": "Insurers get access to new customers' relevant insurance coverage and claims history on a consent basis",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 30,
+  "page_end": 30,
+  "chunk_ids": [
+   "pir-consultation-paper:story20"
+  ]
+ },
+ {
+  "story_no": 21,
+  "title": "Insurers get consent-based access to auxiliary information from external sources for risk assessment",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 30,
+  "page_end": 31,
+  "chunk_ids": [
+   "pir-consultation-paper:story21"
+  ]
+ },
+ {
+  "story_no": 22,
+  "title": "Insurers assess the performance of service providers across the industry",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 31,
+  "page_end": 32,
+  "chunk_ids": [
+   "pir-consultation-paper:story22"
+  ]
+ },
+ {
+  "story_no": 23,
+  "title": "Insurers get access to reliable and granular data on farmers, lands, crops and weather for pricing PM Fasal Bima Yojana (PMFBY) cover",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 32,
+  "page_end": 32,
+  "chunk_ids": [
+   "pir-consultation-paper:story23"
+  ]
+ },
+ {
+  "story_no": 24,
+  "title": "Insurers get visibility on road accidents, treatment, death and Motor Accident Claim Tribunal (MACT) claims",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 32,
+  "page_end": 33,
+  "chunk_ids": [
+   "pir-consultation-paper:story24"
+  ]
+ },
+ {
+  "story_no": 25,
+  "title": "Insurers resolve life claims more efficiently through cross-insurer visibility",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 33,
+  "page_end": 33,
+  "chunk_ids": [
+   "pir-consultation-paper:story25"
+  ]
+ },
+ {
+  "story_no": 26,
+  "title": "Insurers assess mortality trends across customer cohorts and different parts of the country",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 33,
+  "page_end": 34,
+  "chunk_ids": [
+   "pir-consultation-paper:story26"
+  ]
+ },
+ {
+  "story_no": 27,
+  "title": "Insurers identify recovered assets after theft or total-loss claims",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 34,
+  "page_end": 35,
+  "chunk_ids": [
+   "pir-consultation-paper:story27"
+  ]
+ },
+ {
+  "story_no": 28,
+  "title": "Insurers make public disclosures, submit regulatory returns, and provide other relevant information efficiently and receive timely supervisory feedback",
+  "cohort_no": 2,
+  "cohort": "Insurers",
+  "page_start": 35,
+  "page_end": 35,
+  "chunk_ids": [
+   "pir-consultation-paper:story28"
+  ]
+ },
+ {
+  "story_no": 29,
+  "title": "Reinsurers assess risk accumulation and patterns of loss events and catastrophes at country-wide level",
+  "cohort_no": 3,
+  "cohort": "Reinsurers",
+  "page_start": 36,
+  "page_end": 37,
+  "chunk_ids": [
+   "pir-consultation-paper:story29"
+  ]
+ },
+ {
+  "story_no": 30,
+  "title": "Reinsurer’s structure and price better solutions for large and complex risks",
+  "cohort_no": 3,
+  "cohort": "Reinsurers",
+  "page_start": 37,
+  "page_end": 37,
+  "chunk_ids": [
+   "pir-consultation-paper:story30"
+  ]
+ },
+ {
+  "story_no": 31,
+  "title": "Reinsurers competitively price parametric and catastrophe-risk solutions",
+  "cohort_no": 3,
+  "cohort": "Reinsurers",
+  "page_start": 37,
+  "page_end": 38,
+  "chunk_ids": [
+   "pir-consultation-paper:story31"
+  ]
+ },
+ {
+  "story_no": 32,
+  "title": "Insurance Intermediaries identify protection gaps and business growth opportunities",
+  "cohort_no": 4,
+  "cohort": "Insurance Intermediaries",
+  "page_start": 39,
+  "page_end": 39,
+  "chunk_ids": [
+   "pir-consultation-paper:story32"
+  ]
+ },
+ {
+  "story_no": 33,
+  "title": "Insurance Intermediaries compare products across insurers to sell suitable products to customers",
+  "cohort_no": 4,
+  "cohort": "Insurance Intermediaries",
+  "page_start": 40,
+  "page_end": 40,
+  "chunk_ids": [
+   "pir-consultation-paper:story33"
+  ]
+ },
+ {
+  "story_no": 34,
+  "title": "Insurance Intermediary identifies positive performance and service qualities of insurers he is associated with to make the right sales pitch to customers",
+  "cohort_no": 4,
+  "cohort": "Insurance Intermediaries",
+  "page_start": 40,
+  "page_end": 41,
+  "chunk_ids": [
+   "pir-consultation-paper:story34"
+  ]
+ },
+ {
+  "story_no": 35,
+  "title": "Insurance Intermediaries assess the conduct and performance of sales personnel before hiring and for their continuation",
+  "cohort_no": 4,
+  "cohort": "Insurance Intermediaries",
+  "page_start": 41,
+  "page_end": 41,
+  "chunk_ids": [
+   "pir-consultation-paper:story35"
+  ]
+ },
+ {
+  "story_no": 36,
+  "title": "Regulator identifies protection gaps and takes steps to expand insurance coverage of entities and people in different sectors and parts of the country by undertaking development efforts in underserved / unserved areas and segments",
+  "cohort_no": 5,
+  "cohort": "Regulator(s)",
+  "page_start": 42,
+  "page_end": 43,
+  "chunk_ids": [
+   "pir-consultation-paper:story36"
+  ]
+ },
+ {
+  "story_no": 37,
+  "title": "Regulator monitors customer outcomes and strengthens consumer protection through an integrated, real-time view of grievances and their resolution status",
+  "cohort_no": 5,
+  "cohort": "Regulator(s)",
+  "page_start": 43,
+  "page_end": 44,
+  "chunk_ids": [
+   "pir-consultation-paper:story37"
+  ]
+ },
+ {
+  "story_no": 38,
+  "title": "Regulator compares insurer performance and streamlines supervision",
+  "cohort_no": 5,
+  "cohort": "Regulator(s)",
+  "page_start": 44,
+  "page_end": 45,
+  "chunk_ids": [
+   "pir-consultation-paper:story38"
+  ]
+ },
+ {
+  "story_no": 39,
+  "title": "Regulator strengthens oversight of market conduct across insurers and distributors",
+  "cohort_no": 5,
+  "cohort": "Regulator(s)",
+  "page_start": 45,
+  "page_end": 46,
+  "chunk_ids": [
+   "pir-consultation-paper:story39"
+  ]
+ },
+ {
+  "story_no": 40,
+  "title": "Regulator monitors emerging financial and systemic risks",
+  "cohort_no": 5,
+  "cohort": "Regulator(s)",
+  "page_start": 46,
+  "page_end": 46,
+  "chunk_ids": [
+   "pir-consultation-paper:story40"
+  ]
+ },
+ {
+  "story_no": 41,
+  "title": "Banks / NBFCs lending against security of life insurance policies is facilitated",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 47,
+  "page_end": 47,
+  "chunk_ids": [
+   "pir-consultation-paper:story41"
+  ]
+ },
+ {
+  "story_no": 42,
+  "title": "Banks / NBFCs can get competitive insurance products for security of their loan portfolios",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 48,
+  "page_end": 48,
+  "chunk_ids": [
+   "pir-consultation-paper:story42"
+  ]
+ },
+ {
+  "story_no": 43,
+  "title": "Banks / NBFCs get Country-wide information on loss incidence in various asset classes / areas / sectors / industries allowing them to assess portfolio-level risks and identify appropriate risk-transfer solutions",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 48,
+  "page_end": 49,
+  "chunk_ids": [
+   "pir-consultation-paper:story43"
+  ]
+ },
+ {
+  "story_no": 44,
+  "title": "Banks and NBFCs incorporate consent-based insurance information into borrower risk assessment",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 49,
+  "page_end": 50,
+  "chunk_ids": [
+   "pir-consultation-paper:story44"
+  ]
+ },
+ {
+  "story_no": 45,
+  "title": "Financial Institutions are informed about death of a policyholder linked to accounts with them",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 50,
+  "page_end": 50,
+  "chunk_ids": [
+   "pir-consultation-paper:story45"
+  ]
+ },
+ {
+  "story_no": 46,
+  "title": "Credit Rating Agencies incorporate insurance history into credit assessments of companies",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 51,
+  "page_end": 51,
+  "chunk_ids": [
+   "pir-consultation-paper:story46"
+  ]
+ },
+ {
+  "story_no": 47,
+  "title": "Credit Rating Agencies assess contract-performance and surety-bond information of companies including infrastructure construction companies",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 51,
+  "page_end": 52,
+  "chunk_ids": [
+   "pir-consultation-paper:story47"
+  ]
+ },
+ {
+  "story_no": 48,
+  "title": "Loans on Unified Lending Interface launched by Reserve Bank of India (RBI) are able to secure insurance seamlessly",
+  "cohort_no": 6,
+  "cohort": "Financial Institutions (Banks, NBFCs, Credit Bureaus and Credit Rating Agencies)",
+  "page_start": 52,
+  "page_end": 52,
+  "chunk_ids": [
+   "pir-consultation-paper:story48"
+  ]
+ },
+ {
+  "story_no": 49,
+  "title": "Ministry of Agriculture and Farmers Welfare (MoAFW) monitors crop insurance underwriting and claim settlements under PMFBY",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 53,
+  "page_end": 54,
+  "chunk_ids": [
+   "pir-consultation-paper:story49"
+  ]
+ },
+ {
+  "story_no": 50,
+  "title": "National Disaster Management Authority (NDMA) and MoAFW improve their disaster- loss modelling and resilience planning",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 54,
+  "page_end": 54,
+  "chunk_ids": [
+   "pir-consultation-paper:story50"
+  ]
+ },
+ {
+  "story_no": 51,
+  "title": "Ministry of Health and Family Welfare (MoHFW) and National Health Authority (NHA) assess disease burden and hospitalization trends",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 55,
+  "page_end": 55,
+  "chunk_ids": [
+   "pir-consultation-paper:story51"
+  ]
+ },
+ {
+  "story_no": 52,
+  "title": "Central Government and State Governments assess health-insurance coverage and protection gaps for formulating complementary public-healthcare programmes",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 55,
+  "page_end": 56,
+  "chunk_ids": [
+   "pir-consultation-paper:story52"
+  ]
+ },
+ {
+  "story_no": 53,
+  "title": "Infrastructure agencies scale up acceptance of surety bonds by facilitating better visibility into contractors’ performance",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 56,
+  "page_end": 57,
+  "chunk_ids": [
+   "pir-consultation-paper:story53"
+  ]
+ },
+ {
+  "story_no": 54,
+  "title": "Ministry of MSMEs assesses insurance protection for MSMEs",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 57,
+  "page_end": 57,
+  "chunk_ids": [
+   "pir-consultation-paper:story54"
+  ]
+ },
+ {
+  "story_no": 55,
+  "title": "Ministry of Finance assesses protection of productive assets across the economy",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 57,
+  "page_end": 58,
+  "chunk_ids": [
+   "pir-consultation-paper:story55"
+  ]
+ },
+ {
+  "story_no": 56,
+  "title": "Ministry of Road Transport and Highways (MoRTH) monitors motor-insurance coverage and timely payment for treatment of accident victims under golden-hour scheme and compensation in hit & run death cases",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 58,
+  "page_end": 58,
+  "chunk_ids": [
+   "pir-consultation-paper:story56"
+  ]
+ },
+ {
+  "story_no": 57,
+  "title": "PMLA authorities are supported in identifying suspicious claims and fraud patterns",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 59,
+  "page_end": 59,
+  "chunk_ids": [
+   "pir-consultation-paper:story57"
+  ]
+ },
+ {
+  "story_no": 58,
+  "title": "Unique Identification Authority of India (UIDAI) and Civil Registration System (CRS) improve the accuracy of public records for deactivating Aadhaar and recording death based on death insurance claims.",
+  "cohort_no": 7,
+  "cohort": "Government Departments & Agencies",
+  "page_start": 59,
+  "page_end": 59,
+  "chunk_ids": [
+   "pir-consultation-paper:story58"
+  ]
+ },
+ {
+  "story_no": 59,
+  "title": "Researchers and public-policy institutions generate evidence-based insights for policymaking",
+  "cohort_no": 8,
+  "cohort": "Researchers, academia and public policy Institutes",
+  "page_start": 60,
+  "page_end": 60,
+  "chunk_ids": [
+   "pir-consultation-paper:story59"
+  ]
+ }
+]

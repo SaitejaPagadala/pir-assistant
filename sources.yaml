@@ -1,0 +1,71 @@
+# Source inventory for the PIR assistant. Only PUBLIC, published material belongs here.
+# type: pdf | html
+# manual: true  -> you download the file yourself and drop it in data/manual/ (use for sites that block bots)
+# enabled: false -> skipped by the scraper until you flip it on
+# chunker: pir_paper (structure-aware, for the consultation paper) | generic
+
+user_agent: "pir-assistant-personal-research/0.1 (personal, non-commercial; polite crawler; +https://github.com/SaitejaPagadala/pir-assistant)"
+delay_seconds: 3
+timeout_seconds: 40
+
+sources:
+  - id: pir-consultation-paper
+    title: "Public Insurance Registry - Digital Public Infrastructure for Insurance: Public Consultation Paper (Aug 2026)"
+    publisher: IRDAI
+    doc_type: consultation_paper
+    type: pdf
+    manual: true
+    file: "data/manual/PIR - Public Consultation Paper.pdf"
+    version: "Aug 2026"
+    doc_date: "2026-08"
+    short: "PIR Consultation Paper (Aug 2026)"
+    page_offset: 0          # printed page = PDF page (1-based) + page_offset
+    chunker: pir_paper
+    enabled: true
+
+  - id: iib-pir-portal
+    title: "IIB - PIR consultation portal"
+    publisher: IIB
+    doc_type: web_page
+    type: html
+    url: "https://iib.gov.in/pir"
+    chunker: generic
+    enabled: true
+
+  - id: insurance-act-sbsr
+    title: "Insurance Act 1938 (as amended by SBSR Act 2025) - IRDAI document"
+    publisher: IRDAI
+    doc_type: statute
+    type: html
+    url: "https://irdai.gov.in/document-detail?documentId=9603959"
+    chunker: generic
+    enabled: true
+
+  - id: irda-act-sbsr
+    title: "IRDA Act 1999 (as amended by SBSR Act 2025) - IRDAI document"
+    publisher: IRDAI
+    doc_type: statute
+    type: html
+    url: "https://irdai.gov.in/document-detail?documentId=9604505"
+    chunker: generic
+    enabled: true
+
+  - id: pib-g20-dpi
+    title: "PIB press release - G20 Task Force on DPI (design principles referenced by the paper)"
+    publisher: PIB
+    doc_type: press_release
+    type: html
+    url: "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2033389&reg=48&lang=2"
+    chunker: generic
+    enabled: true
+
+  # ---- Add more below. Candidates: IRDAI press releases / circulars on PIR, IIB FAQs,
+  # ---- DPDP Act 2023 (MeitY), Bima Sugam material, final PIR regulations when published.
+  # - id: dpdp-act-2023
+  #   title: "Digital Personal Data Protection Act, 2023"
+  #   publisher: MeitY
+  #   doc_type: statute
+  #   type: pdf
+  #   manual: true
+  #   file: data/manual/dpdp_act_2023.pdf
+  #   chunker: generic

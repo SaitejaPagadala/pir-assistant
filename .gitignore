@@ -1,0 +1,19 @@
+# secrets
+.env
+.streamlit/secrets.toml
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# data: raw downloads stay local; processed index IS committed so the hosted app needs no build step
+data/raw/
+data/manual/*
+!data/manual/.gitkeep
+.DS_Store
+
+# nested/misplaced secrets
+**/secrets.toml
